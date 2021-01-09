@@ -32,17 +32,32 @@
         const btn = document.getElementById('btn');
         let random = Math.floor(Math.random() * 6) + 1;
         btn.addEventListener('click',function(e){
-            const num = (document.getElementById('num')).value;
+            let num = (document.getElementById('num')).value;
+            //盡早return，當發現程式碼不會再執行
             //如果沒有輸入數字
             if(! num){
                 alert('input something, please!');
                 return;
             }
+            if(num > 6){
+                alert('input number 1 to 6, please!');
+                return;
+            }
 
+            console.log(`random: ${random}`);
+            console.log(typeof random);
+            num = parseInt(num);
+            console.log(typeof num);
 
-
-            console.log(random);
-            console.log(num);
+            if(num === random){
+                alert('Good job,You are right');
+                return;
+            }
+            if(num > random){
+                alert('smaller, please!');
+                return;
+            }
+            alert('bigeer, please!');
         });
     </script>
 </body>
