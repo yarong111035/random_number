@@ -24,7 +24,15 @@
 </head>
 <body>
     <h1>Guess number</h1>
-    <input type="text">
-    <button>Guess</button>
+    <input type="text" id="num">
+    <button id="btn">Guess</button>
+
+    <script>
+        const num = document.getElementById('num');
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click',function(e){
+            console.log(num.value);
+        });
+    </script>
 </body>
 </html>
