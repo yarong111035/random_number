@@ -67,10 +67,18 @@
                 return;
             }
             if(num > random){
-                alert('smaller, please!');
+                Swal.fire({
+                title: 'Ohoh!',
+                text: '再小一些',
+                icon: 'warning',
+                })
                 return;
             }
-            alert('bigeer, please!');
+            Swal.fire({
+                title: 'Ohoh!',
+                text: '再大一些',
+                icon: 'warning',
+                })
         });
     </script>
 </body>
