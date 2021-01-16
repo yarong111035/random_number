@@ -59,7 +59,11 @@
             console.log(typeof num);
 
             if(num === random){
-                alert('Good job,You are right');
+                Swal.fire({
+                title: 'YA!',
+                text: '猜對囉!!',
+                icon: 'success',
+                })
                 return;
             }
             if(num > random){
