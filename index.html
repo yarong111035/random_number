@@ -37,11 +37,19 @@
             //盡早return，當發現程式碼不會再執行
             //如果沒有輸入數字
             if(! num){
-                alert('input something, please!');
+                Swal.fire({
+                title: 'Oops!',
+                text: '需要輸入數字喔',
+                icon: 'error',
+                })
                 return;
             }
             if(num > 6){
-                alert('input number 1 to 6, please!');
+                Swal.fire({
+                title: 'Oops!',
+                text: '數字不能大於6',
+                icon: 'error',
+                })
                 return;
             }
 
